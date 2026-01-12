@@ -10,6 +10,11 @@
 a{
     text-decoration: none;
     position: relative;
+    transition: opacity 300ms ease;
+}
+
+i:hover{
+    opacity: 0.7;
 }
 
 .link__hover-effect:after{
@@ -196,7 +201,7 @@ ABOUT ME
 .about-me__info--para{
     font-size: 20px;
     margin-bottom: 28px;
-    animation: fade-up 650ms 400ms backwards;
+    animation: fade-up 650ms 600ms backwards;
 }
 
 .about-me__link{
@@ -206,7 +211,7 @@ ABOUT ME
 }
 
 .about-me__links{
-    animation: fade-up 650ms 400ms backwards;
+    animation: fade-up 650ms 800ms backwards;
 }
 
 @keyframes fade-up{
@@ -228,6 +233,33 @@ ABOUT ME
 
 .about-me__img{
     width: 100%;
+    animation: fade-in 1200ms 800ms backwards;
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.wave{
+    display: inline-block; /*Required for rotate of animation inside the span*/
+    animation: animate-wave 500ms infinite ease-in-out;
+}
+
+@keyframes animate-wave{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
 }
 
 /*
